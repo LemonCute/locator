@@ -19,6 +19,7 @@
 ************************************************/
 
 u8 Echo=0; //是否开启回显
+
 u16 mt[5]={0};
 u32 BASEt=0;
 u8 i=0;
@@ -125,9 +126,9 @@ int main(void){
 		}
 //------------------------------------遥控器部分---------------------------/
 			Remote();			
-	};
-	
+	}
 }
+
 //----------------------------------主程序结束--------------------------------//
 
 
@@ -242,10 +243,43 @@ void machine_move(u16 dx,u16 dy,u16 dz,u16 alpha,u16 beta)
 ///-------------------------电机串口响应结束-------------------------------/
 
 
+//-------------------遥控器部分-------------------------------------------/
+void Remote(){	
 
+	u8 key;     			//遥控按键使用
+	char *str=0;			//遥控的键值含义
+	key=Remote_Scan();
+ 	
+			switch(key)
+				{
+				case 0:str="ERROR";			break;			   
+				case 162:str="POWER";		Echo =!Echo;break;	    
+				case 98:str="UP";				machine_enable0=1;break;	  			 	//上 
+				case 2:str="PLAY";			RS485receive();break;		 
+				case 226:str="ALIENTEK";break;		  
+				case 194:str="RIGHT";		machine_enable1=1;break;	 	 				//右 
+				case 34:str="LEFT";			machine_enable1=1;break;			  		//左
+				case 224:str="VOL-";		machine_enable2=1;break;			  		//前
+				case 168:str="DOWN";		machine_enable0=1;break;		  			//下 
+				case 144:str="VOL+";		machine_enable2=1;break;		    		//后
+				case 104:str="1";				machine_enable3=1;break;		  			//1
+				case 152:str="2";				break;	   
+				case 176:str="3";				machine_enable3=1;break;	    			//3
+				case 48:str="4";				machine_enable4=1;break;						//4    
+				case 24:str="5";				break;		    
+				case 122:str="6";				machine_enable4=1;break;						//6	  
+				case 16:str="7";				break;			   					
+				case 56:str="8";				break;	 
+				case 90:str="9";				break;
+				case 66:str="0";				break;
+				case 82:str="DELETE";		break;		 
+				}
+
+}
+//------------------------------------------------------------------------------//
 
 //-------------------遥控器部分-------------------------------------------/
-void Remote()				
+void Remote_op()				
 {	
 	#define M 5
 	u8 key;     			//遥控按键使用
