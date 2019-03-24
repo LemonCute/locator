@@ -21,34 +21,50 @@ Target DLL:      Segger\JL2CM3.dll V2.99.13.0
 Dialog DLL:      TARMSTM.DLL V1.64.0.0
  
 <h2>Project:</h2>
-C:\Users\Acer-smk\Desktop\主控-骨科无创式三维定位器\USER\Locator Master.uvprojx
-Project File Date:  01/25/2018
+C:\Users\Acer-smk\Desktop\3月10日-骨科无创式三维定位器\USER\Locator Master.uvprojx
+Project File Date:  03/09/2019
 
 <h2>Output:</h2>
 Build target 'LocatorMaster'
 compiling main.c...
-main.c(81): warning:  #223-D: function "memcpy" declared implicitly
+main.c(83): warning:  #223-D: function "memcpy" declared implicitly
                                 memcpy(strTest,USART_RX_BUF,len);                       //字符串拷贝
-main.c(56): warning:  #177-D: variable "key" was declared but never referenced
-        u8 key=20,T,nrfsend_time,Answer;
-main.c(56): warning:  #177-D: variable "T" was declared but never referenced
-        u8 key=20,T,nrfsend_time,Answer;
-main.c(56): warning:  #177-D: variable "nrfsend_time" was declared but never referenced
-        u8 key=20,T,nrfsend_time,Answer;
-main.c(56): warning:  #177-D: variable "Answer" was declared but never referenced
-        u8 key=20,T,nrfsend_time,Answer;
-main.c(199): warning:  #177-D: variable "maxdegree" was declared but never referenced
-        u16 maxdistance=0,maxdegree=0;
-main.c(256): warning:  #550-D: variable "str" was set but never used
+main.c(156): warning:  #177-D: variable "pitch" was declared but never referenced
+                                float pitch,roll,heading;
+main.c(156): warning:  #177-D: variable "roll" was declared but never referenced
+                                float pitch,roll,heading;
+main.c(156): warning:  #177-D: variable "heading" was declared but never referenced
+                                float pitch,roll,heading;
+main.c(157): warning:  #177-D: variable "pitchsign" was declared but never referenced
+                                char pitchsign,rollsign,headingsign;            
+main.c(157): warning:  #177-D: variable "rollsign" was declared but never referenced
+                                char pitchsign,rollsign,headingsign;            
+main.c(157): warning:  #177-D: variable "headingsign" was declared but never referenced
+                                char pitchsign,rollsign,headingsign;            
+main.c(158): warning:  #177-D: variable "rs485buf" was declared but never referenced
+                                u8 rs485buf[5]={104,4,0,4,8};   
+main.c(159): warning:  #177-D: variable "tem_buf" was declared but never referenced
+                                u8 tem_buf[20]={0};
+main.c(160): warning:  #177-D: variable "key" was declared but never referenced
+                                u8 key,len,T;
+main.c(160): warning:  #177-D: variable "len" was declared but never referenced
+                                u8 key,len,T;
+main.c(160): warning:  #177-D: variable "T" was declared but never referenced
+                                u8 key,len,T;
+main.c(279): warning:  #550-D: variable "str" was set but never used
         char *str=0;                    //遥控的键值含义
-main.c: 7 warnings, 0 errors
+main.c(346): warning:  #550-D: variable "str" was set but never used
+        char *str=0;                    //遥控的键值含义
+main.c(384): warning:  #550-D: variable "str" was set but never used
+        char *str=0;                    //遥控的键值含义
+main.c: 15 warnings, 0 errors
 linking...
-Program Size: Code=22022 RO-data=850 RW-data=96 ZI-data=3264  
+Program Size: Code=20540 RO-data=852 RW-data=96 ZI-data=3264  
 FromELF: creating hex file...
-"..\OBJ\PWM.axf" - 0 Error(s), 7 Warning(s).
+"..\OBJ\PWM.axf" - 0 Error(s), 15 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\Acer-smk\Desktop\主控-骨科无创式三维定位器\USER\RTE
+  C:\Users\Acer-smk\Desktop\3月10日-骨科无创式三维定位器\USER\RTE
   D:\Keil_MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0
 
 <h2>Collection of Component Files used:</h2>

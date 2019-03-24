@@ -5,8 +5,8 @@
 #define direction0 		PGout(15)		// PG15 -> 	dx			方向
 #define direction1 		PGout(14)		// PG14	->	dy
 #define direction2 		PGout(13)		// PG13	->	dz
-#define direction3	 	PGout(12)		// PG12	->	Alpha
-#define direction4 		PGout(11)		// PG11	->	Beta
+#define direction3	 	PGout(12)		// PG12	->	Alpha  PC11
+#define direction4 		PGout(11)		// PG11	->	Beta	PC10
 
 #define machine_enable0 PFout(0)		// PF0	-> dx			使能
 #define machine_enable1 PFout(1)		// PF1	-> dy
